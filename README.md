@@ -5,15 +5,15 @@ This project is in development phase
 ## Install dependencies
 Packages:
 
-npm install @mui/material @emotion/react @emotion/styled
-npm install @mui/icons-material
-npm install --save @craco/craco
-npm install --save-dev craco-alias
-npm i -D react-router-dom 
-npm install axios@latest
-npm install cors-anywhere
-npm i cheerio-without-node-native@0.20.2
- https://github.com/oyyd/cheerio-without-node-native
+npm install @mui/material @emotion/react @emotion/styled  
+npm install @mui/icons-material  
+npm install --save @craco/craco  
+npm install --save-dev craco-alias  
+npm i -D react-router-dom   
+npm install axios@latest  
+npm install cors-anywhere  
+npm i cheerio-without-node-native@0.20.2  
+ https://github.com/oyyd/cheerio-without-node-native  
 
 ### run the project `npm start`
 
@@ -24,7 +24,9 @@ if you have an error loading lyrics
 you have to acces to:
 https://cors-anywhere.herokuapp.com/corsdemo
 
-And click the button "Request temporary access to the demo server" in order to overcome cors problems
+And click the button "Request temporary access to the demo server" in order to overcome cors problems  
+![imagen](https://user-images.githubusercontent.com/20178297/231666417-4a5e8d44-16d3-46f3-b531-957deca87dc7.png)
+
 
 ### Error 429
 The API Genius has a maximun of request 50 per hour , songifyapp5 use this api in order to obtain the information
