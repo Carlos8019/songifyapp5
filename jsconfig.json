@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@route-app": ["./route"],
+        "@views": ["./views"],
+        "@components" : ["./components"],
+        "@api":["./services"],
+        "@utils":["./utils"]
+      }
+    },
+    "exclude": ["node_modules"]
+  }
