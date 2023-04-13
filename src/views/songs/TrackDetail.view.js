@@ -11,7 +11,7 @@ import GetLiryc from "@api/ApiLyric.services";
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { MSG_LYRIC_NOT_AVAILABLE } from "@utils/Constants.utils";
 import { CardSong } from '@components'
-import { MSG_SONG_DETAIL } from "@utils/Constants.utils";
+import { MSG_SONG_DETAIL, MSG_TITLE_TRACK_LABEL } from "@utils/Constants.utils";
 
 
 export default function TrackDetail() {
@@ -38,6 +38,8 @@ export default function TrackDetail() {
                                 </Typography>
                                 <Typography variant="subtitle1" color="text.secondary" component="div">
                                     {data.artist}
+                                    <br />
+                                    {data.release_date}
                                 </Typography>
                             </CardContent>
                             <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
@@ -56,13 +58,17 @@ export default function TrackDetail() {
                         />
 
                     </Card>
-                    <TextareaAutosize
-                        minRows={4}
-                        placeholder={MSG_LYRIC_NOT_AVAILABLE}
-                        readOnly
-                        defaultValue={lyric}
-                        style={{ width: 400 }}
-                    />
+                    <div>
+                        {MSG_TITLE_TRACK_LABEL}
+                        <br />
+                        <TextareaAutosize
+                            minRows={4}
+                            placeholder={MSG_LYRIC_NOT_AVAILABLE}
+                            readOnly
+                            defaultValue={lyric}
+                            style={{ width: 450 }}
+                        />
+                    </div>
                 </div>
             </CardSong>
         </>
