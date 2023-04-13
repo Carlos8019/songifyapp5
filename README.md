@@ -1,10 +1,15 @@
-# Getting Started with songifyapp5
+# Getting Started with songifyapp5 
 
-This project is in development phase
+Songifyapp5 is a react app that convert song name's into GIF's also provides information about songs such as lyrics, artist, albumm.   
+The user enter a song name and songifyapp5 search information using public api's like lastfm and genius api providing the song's details.  
 
-## Install dependencies
-Packages:
+This project is in development phase 
 
+## Install dependencies 
+#install node modules folder    
+npm init 
+
+Packages: 
 npm install @mui/material @emotion/react @emotion/styled  
 npm install @mui/icons-material  
 npm install --save @craco/craco  
@@ -29,5 +34,25 @@ And click the button "Request temporary access to the demo server" in order to o
 
 
 ### Error 429
-The API Genius has a maximun of request 50 per hour , songifyapp5 use this api in order to obtain the information
-Last FM API doesn't  have lyrics and MusicMatch API has a maximun of 2k of information per request.
+The API Genius has a maximun of request by 50 per hour , songifyapp5 use this api in order to obtain the information
+Last FM API doesn't have lyrics and MusicMatch API has a maximun of 2k of information per request.
+
+## Page details   
+Main menu   
+The application has a main menu with two options
+![imagen](https://user-images.githubusercontent.com/20178297/231776745-ffb65612-ce51-46ce-9678-150dcb548070.png)
+
+"Recherche de titres": This component search a song according to the information provided by user, showing an autocomplete input with the matches:  
+![imagen](https://user-images.githubusercontent.com/20178297/231777286-d581bae4-fdd9-4636-a390-39f106791631.png)  
+
+When user select a song, songifyapp5 show related information about it, including album art, lyrics and artis.     
+![imagen](https://user-images.githubusercontent.com/20178297/231778022-796b07e6-411f-4961-ba5e-59cd64631aa8.png)
+
+"Titres favoris": In development...
+
+### Technical details  
+Songifyapp5 uses react as a programming language.
+Project structure:  
+![imagen](https://user-images.githubusercontent.com/20178297/231787946-4ae881d1-4ee0-488c-b9f9-a7b67d070b2f.png)
+
+
