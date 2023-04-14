@@ -9,17 +9,17 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
+//style base
+let cardStyle = {
+    display: 'block',
+    width: '35vw',
+    transitionDuration: '0.3s',
+    height: '35vw',
+    overflowY: "scroll"
+}
 
 //template card pour les pages, on utilise le props pour ajouter un composant children
 export default function CardSongs(props) {
-    //style base
-    let cardStyle = {
-        display: 'block',
-        width: '35vw',
-        transitionDuration: '0.3s',
-        height: '35vw',
-        overflowY: "scroll"
-    }
     return (
         <>
             <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
