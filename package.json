@@ -6,6 +6,8 @@
     "@craco/craco": "^7.1.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@giphy/js-fetch-api": "^4.8.1",
+    "@giphy/react-components": "^6.8.1",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.16",
     "@testing-library/jest-dom": "^5.16.5",
