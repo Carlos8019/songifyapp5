@@ -25,6 +25,7 @@ export const MSG_LYRIC_NOT_AVAILABLE = "La Parole n'est pas disponible "
 export const APP_NAME = "SongifyApp5"
 export const APP_MENU_NAMES = ['Recherche de titres', 'Titres favoris'];
 export const MSG_TITLE_TRACK_LABEL = "Parole"
+export const MSG_FAVORITE_TOOLTIP="Ajouter en favori"
 //path des url's
 export const URL_TRACK_DETAIL = "/track-detail";
 export const URL_INITIAL_PAGE = "/"
