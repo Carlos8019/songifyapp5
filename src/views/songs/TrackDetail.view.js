@@ -10,7 +10,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import GetLiryc from "@api/ApiLyric.services";
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { MSG_LYRIC_NOT_AVAILABLE } from "@utils/Constants.utils";
-import { CardSong, GifSong, ListMotsUtilises } from '@components'
+import { CardSong, GifSong, ListMotsUtilises, FavoriteButton } from '@components'
 import { MSG_SONG_DETAIL, MSG_TITLE_TRACK_LABEL, MSG_GIF_SEARCH, MSG_FREQUENT_WORDS } from "@utils/Constants.utils";
 import FrequentWords from "@utils/FrequentWords.utils";
 
@@ -59,6 +59,7 @@ export default function TrackDetail() {
                         <Card sx={{ display: 'flex' }}>
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <CardContent sx={{ flex: '1 0 auto' }}>
+                                    <FavoriteButton />
                                     <Typography component="div" variant="h5">
                                         {data.title}
                                     </Typography>
