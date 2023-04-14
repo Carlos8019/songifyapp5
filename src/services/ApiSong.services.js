@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_DATA} from "@utils/Constants.utils";
+import { API_DATA } from "@utils/Constants.utils";
 
 //service api de genius , il y a plus d'information par rapport à lastfm les paroles par exemple
 export default async function GetSongs(songName) {
@@ -13,7 +13,7 @@ export default async function GetSongs(songName) {
         let { apiKey, authHeader = false } = options;
         const reqUrl = `${searchUrl}${encodeURIComponent(songName)}`;
         const headers = {
-            Authorization: API_DATA.AUTHORIZATION_API+' ' + apiKey
+            Authorization: API_DATA.AUTHORIZATION_API + ' ' + apiKey
         };
 
         let { data } = await axios.get(
@@ -23,9 +23,9 @@ export default async function GetSongs(songName) {
         if (data.response.hits.length === 0) return null;
 
         const results = data.response.hits.map((val) => {
-            const { full_title, song_art_image_url, id, url, artist_names } = val.result;
+            const { full_title, song_art_image_url, id, url, artist_names, release_date_for_display } = val.result;
             //objet à retourner afin d'utiliser toujours le meme nom des champs 
-            return { id: id, artist: artist_names, title: full_title, image: song_art_image_url, lyric_url: url }
+            return { id: id, artist: artist_names, title: full_title, image: song_art_image_url, lyric_url: url, release_date: release_date_for_display }
         });
 
         return results;

@@ -45,8 +45,9 @@ The application has a main menu with two options
 "Recherche de titres": This component search a song according to the information provided by user, showing an autocomplete input with the matches:  
 ![imagen](https://user-images.githubusercontent.com/20178297/231777286-d581bae4-fdd9-4636-a390-39f106791631.png)  
 
-When user select a song, songifyapp5 show related information about it, including album art, lyrics and artis.     
-![imagen](https://user-images.githubusercontent.com/20178297/231778022-796b07e6-411f-4961-ba5e-59cd64631aa8.png)
+When user select a song, songifyapp5 show related information about it, including album art, lyric, artis, the gifs associated to the song, and gifs of words from the lyric.       
+![imagen](https://user-images.githubusercontent.com/20178297/231953414-a233c40c-c07a-4263-9ee0-d6b24338f2dd.png)
+
 
 "Titres favoris": In development...
 
