@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,14 +12,13 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { APP_NAME, APP_MENU_NAMES, URL_INITIAL_PAGE } from "@utils/Constants.utils";
-import { useNavigate } from 'react-router-dom';
+import { APP_NAME, APP_MENU_NAMES, URL_INITIAL_PAGE, URL_TRACK_FAVORITE } from "@utils/Constants.utils";
+import { NavLink } from 'react-router-dom';
 
 const pages = APP_MENU_NAMES
 const settings = [];
 
 export default function MenuInitial() {
-  const navigate = useNavigate()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -33,14 +32,13 @@ export default function MenuInitial() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  const handleNavMenu = () => {
-    navigate(URL_INITIAL_PAGE);
-  }
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  useEffect(() => {
 
+  }, [])
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -116,15 +114,22 @@ export default function MenuInitial() {
             {APP_NAME}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            <NavLink exact to={URL_INITIAL_PAGE}>
               <Button
-                key={page}
-                onClick={handleNavMenu}
+                key={pages[0]}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {pages[0]}
               </Button>
-            ))}
+            </NavLink>
+            <NavLink exact to={URL_TRACK_FAVORITE}>
+              <Button
+                key={pages[1]}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {pages[1]}
+              </Button>
+            </NavLink>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

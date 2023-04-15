@@ -6,7 +6,11 @@
         "@views": ["./views"],
         "@components" : ["./components"],
         "@api":["./services"],
-        "@utils":["./utils"]
+        "@utils":["./utils"],
+        "@context":["./context"],
+        "@redux":["./store/redux"],
+        "@storage":["./store/storage"],
+        "@slice":["./store/slices"]
       }
     },
     "exclude": ["node_modules"]
