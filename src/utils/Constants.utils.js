@@ -25,10 +25,15 @@ export const MSG_LYRIC_NOT_AVAILABLE = "La Parole n'est pas disponible "
 export const APP_NAME = "SongifyApp5"
 export const APP_MENU_NAMES = ['Recherche de titres', 'Titres favoris'];
 export const MSG_TITLE_TRACK_LABEL = "Parole"
-export const MSG_FAVORITE_TOOLTIP="Ajouter en favori"
+export const MSG_FAVORITE_TOOLTIP = "Ajouter en favori"
+export const MSG_FAVORITE_TITLE_PAGE="Titres favoris"
 //path des url's
 export const URL_TRACK_DETAIL = "/track-detail";
 export const URL_INITIAL_PAGE = "/"
+export const URL_TRACK_FAVORITE = "/track-favorite"
 //parameters
 export const NUM_FREQUENT_WORDS = 10;
 export const NUM_CHATACTERS_FREQUENT_WORDS = 5;
+export const NAME_LOCAL_STORAGE_FAVORITE = "favoriteSongs"
+//gestion des actions et reducer redux
+export const ACTION_SET_FAVORITE = "SET_FAVORITE";
