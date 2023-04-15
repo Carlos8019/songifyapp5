@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useLocation } from "react-router-dom";
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import GetLiryc from "@api/ApiLyric.services";
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { MSG_LYRIC_NOT_AVAILABLE } from "@utils/Constants.utils";
-import { CardSong, GifSong, ListMotsUtilises, FavoriteButton } from '@components'
+import { CardSong, GifSong, ListMotsUtilises, FavoriteButton, TrackCard } from '@components'
 import { MSG_SONG_DETAIL, MSG_TITLE_TRACK_LABEL, MSG_GIF_SEARCH, MSG_FREQUENT_WORDS } from "@utils/Constants.utils";
 import FrequentWords from "@utils/FrequentWords.utils";
+import SongContext from "@context/song.context";
 
 let style = {
     display: "flex",
@@ -22,6 +17,7 @@ let style = {
 }
 
 export default function TrackDetail() {
+    const { setSong } = useContext(SongContext)
     const [lyric, setLyric] = useState("");
     const [listWords, setListWord] = useState([]);
     const location = useLocation();
@@ -44,6 +40,7 @@ export default function TrackDetail() {
     useEffect(() => {
         updateLyric();
         updateListWord();
+        setSong(data)
     }, [lyric])
 
     return (
@@ -57,33 +54,8 @@ export default function TrackDetail() {
                 <CardSong title={MSG_SONG_DETAIL} description="">
                     <div>
                         <Card sx={{ display: 'flex' }}>
-                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                                <CardContent sx={{ flex: '1 0 auto' }}>
-                                    <FavoriteButton />
-                                    <Typography component="div" variant="h5">
-                                        {data.title}
-                                    </Typography>
-                                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                                        {data.artist}
-                                        <br />
-                                        {data.release_date}
-                                    </Typography>
-                                </CardContent>
-                                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-
-                                    <IconButton aria-label="play/pause">
-                                        <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-                                    </IconButton>
-
-                                </Box>
-                            </Box>
-                            <CardMedia
-                                component="img"
-                                sx={{ width: 151 }}
-                                image={data.image}
-                                alt={data.title}
-                            />
-
+                            <FavoriteButton />
+                            <TrackCard data={data} width={400} />
                         </Card>
                         <div>
                             {MSG_TITLE_TRACK_LABEL}

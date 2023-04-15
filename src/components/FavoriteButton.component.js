@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import IconButton from '@mui/joy/IconButton';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Tooltip from '@mui/material/Tooltip';
 import { MSG_FAVORITE_TOOLTIP } from "@utils/Constants.utils";
 import LinearProgress from '@mui/joy/LinearProgress';
+import SongContext from "@context/song.context";
 const style = {
     clicked: "solid",
     unClicked: "soft",
@@ -11,11 +12,14 @@ const style = {
     show: "visible"
 }
 export default function FavoriteButton() {
+    const { setFavorite } = useContext(SongContext)
     const [flagClicked, setFlagClicked] = useState(false);
     const [showBar, setShowBar] = useState(false);
     const handleClick = () => {
         setShowBar(true);
         setFlagClicked(!flagClicked)
+        //appeler le dispatch despues le context
+        setFavorite()
     }
     const handleProgressBar = () => {
         setShowBar(false);
