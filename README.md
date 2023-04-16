@@ -46,10 +46,17 @@ The application has a main menu with two options
 ![imagen](https://user-images.githubusercontent.com/20178297/231777286-d581bae4-fdd9-4636-a390-39f106791631.png)  
 
 When user select a song, songifyapp5 show related information about it, including album art, lyric, artis, the gifs associated to the song, and gifs of words from the lyric.       
-![imagen](https://user-images.githubusercontent.com/20178297/231953414-a233c40c-c07a-4263-9ee0-d6b24338f2dd.png)
+![imagen](https://user-images.githubusercontent.com/20178297/232259965-7c78a1bb-c109-427c-8f28-97ce92bf779b.png)
 
+Lyric:  
+![imagen](https://user-images.githubusercontent.com/20178297/232260099-98dcdad8-66f2-40cc-98bb-a13ffcfb4b66.png)
 
-"Titres favoris": In development...
+"Titres favoris": This component use a icon button to save the song to local storage in favorites  
+![imagen](https://user-images.githubusercontent.com/20178297/232260002-ab6f9280-0a45-421f-b64a-641c8dd96446.png)
+
+The component favorites list show the listo of tracks saved using the icon button with information about the song  
+![imagen](https://user-images.githubusercontent.com/20178297/232260191-31f255a7-fe44-4a0f-a11f-7aada853e7f0.png)
+
 
 ### Technical details  
 Songifyapp5 uses react as a programming language.
