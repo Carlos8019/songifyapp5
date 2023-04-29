@@ -8,9 +8,6 @@ import { MSG_FREQUENT_WORDS_COUNT } from "@utils/Constants.utils";
 import { GifWordLyric } from '@components'
 
 export default function ListMotsUtilises(props) {
-    const data = props.listWords.map((el) => {
-        return { word: el[0], num: el[1] }
-    })
 
     return (
         <>
