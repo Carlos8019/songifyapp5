@@ -5,22 +5,27 @@ The user enter a song name and songifyapp5 search information using public api's
 
 This project is in development phase 
 
-## Install dependencies 
-#install node modules folder    
-npm init 
-
 Packages: 
-npm install @mui/material @emotion/react @emotion/styled  
-npm install @mui/icons-material  
-npm install --save @craco/craco  
-npm install --save-dev craco-alias  
-npm i -D react-router-dom   
-npm install axios@latest  
-npm install cors-anywhere  
-npm i cheerio-without-node-native@0.20.2  
- https://github.com/oyyd/cheerio-without-node-native  
+ @mui/material @emotion/react @emotion/styled  
+ @mui/icons-material  
+ @craco/craco  
+ craco-alias  
+ react-router-dom   
+ axios@latest  
+ cheerio-without-node-native@0.20.2 -> https://github.com/oyyd/cheerio-without-node-native  
 
-### run the project `npm start`
+## Version
+Node v18.15.0
+npm 9.5.0
+
+## Install
+
+git clone https://github.com/Carlos8019/songifyapp5.git  
+cd songifyapp5  
+npm install  
+npm i cheerio-without-node-native@0.20.2  
+go to https://cors-anywhere.herokuapp.com/corsdemo in your browser and click the button "Request temporary access to the demo server"
+npm start
 
 ### Solve problems
 
