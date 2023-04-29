@@ -15,8 +15,8 @@ Packages:
  cheerio-without-node-native@0.20.2 -> https://github.com/oyyd/cheerio-without-node-native  
 
 ## Version
-Node v18.15.0
-npm 9.5.0
+Node v18.15.0  
+npm 9.5.0  
 
 ## Install
 
