@@ -24,7 +24,7 @@ git clone https://github.com/Carlos8019/songifyapp5.git
 cd songifyapp5  
 npm install  
 npm i cheerio-without-node-native@0.20.2  
-go to https://cors-anywhere.herokuapp.com/corsdemo in your browser and click the button "Request temporary access to the demo server"
+go to https://cors-anywhere.herokuapp.com/corsdemo in your browser and click the button "Request temporary access to the demo server"  
 npm start
 
 ### Solve problems
