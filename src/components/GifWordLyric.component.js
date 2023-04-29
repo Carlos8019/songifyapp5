@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Carousel } from '@giphy/react-components'
 import { GiphyFetch } from '@giphy/js-fetch-api'
 import { API_DATA } from "@utils/Constants.utils";

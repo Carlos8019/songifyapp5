@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { TrackCard } from '@components'
 import Typography from '@mui/material/Typography';
 import { MSG_FAVORITE_TITLE_PAGE } from "@utils/Constants.utils";
-import Box from '@mui/material/Box';
 
 export default function FavoriteSongs() {
     const songs = useSelector((state) => state.song.favoriteArray)
